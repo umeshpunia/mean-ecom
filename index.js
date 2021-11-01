@@ -46,7 +46,7 @@ app.use('/api/admin/',catRoutes)
 
 
 
-mongoose.connect(`mongodb://127.0.0.1:27017/eapp`,
+mongoose.connect(``mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@umesh.hybg3.mongodb.net/12PM?retryWrites=true&w=majority``,
   (err) => {
     if (err) {
       console.log("err", err);
