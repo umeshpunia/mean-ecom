@@ -26,6 +26,12 @@ const catRoutes = require('./routes/category')
 app.get("/", (req, res) => {
   res.send({ msg: "this is not a route" });
 });
+app.get("/admin", (req, res) => {
+
+  res.sendFile(path.join(__dirname, '/public/index.html'));
+
+
+});
 
 
 app.use('/api/admin/',adminRoutes)
